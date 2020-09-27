@@ -6,7 +6,7 @@
     	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 		<link rel="stylesheet" href="css/reset.css"/>
 		<link rel="stylesheet" href="css/global.css"/>
-
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no"/>
 		<style type="text/css">
 
 					/*	.row
@@ -21,27 +21,74 @@
 				border : 2px solid black;
 				margin-left: 10px;
 			}*/
-			.col
+			.container-fluid
 			{
-				border : 2px solid black;
+				width: 90%;
+			
 			}
 
-			.container
+			ul:hover .dropdown-menu
 			{
+    			display: block;
+			}
+
+			@media screen and (max-width:600px)
+			{
+ 				form
+ 				{
+ 					display: none;
+ 				}
+
+ 			}
+			@media screen and (max-width:320px)
+			{
+ 				.share
+ 				{
+ 					display: none;
+ 				}
+ 			}
+
+ 			@media screen and (max-width:1400px)
+			{
+ 				font-size : 100%;
+ 			}
+
+ 			@media screen and (max-width:600px)
+			{
+ 				font-size : 75%;
+ 			}
+
+ 			@media screen and (max-width:450px)
+			{
+ 				font-size : 50%;
+ 			}
+
+		/*	.row
+			{
+				border : 2px solid black;
 				
-				border : 2px solid black;
 			}
-
-			aside{
-				border : 2px solid black;
-
-			}
-
-			.stats-links
+			.logo-search
 			{
 				border : 2px solid black;
+				
 			}
-
+			.user
+			{
+				border : 2px solid black;
+				
+			}
+			form
+			{
+				border : 2px solid black;
+				
+			}
+			.links
+			{
+				border : 2px solid black;
+				
+			}
+*/
 
 		</style>
 	</head>
@@ -56,15 +103,28 @@
 							</div>
 							</div>
 							<div class="col-md-8 col-sm-8 col-xs-8">
-							<form method="POST" action="index.html" style="width:200px;">
+							<form method="POST" action="index.html" style="width : 200px;">
 								<input type="search" required class="search">
 								<input type="submit" name="submit" value="Rechercher" class="submit">
 							</form>
 							</div>
 							<div class="col-md-2 col-sm-2 col-xs-2">
 							<div class="user">
-				    			<a href="#">Luke Chesser</a>
+							<nav>
+							<div class="dropdown">
+								<ul>
+									<li><a class="dropdown-toggle" href="#">Luke Chesser</a></li>
+									<div class="dropdown-menu">
+									<ul>
+									<li><a class="dropdown-item" href="#">Browse</a></li>
+									<li><a class="dropdown-item" href="#">Your music</a></li>
+									</ul>
+									</div>
+								</ul>
 							</div>
+							</nav>
+								</div>
+							
 							</div>
 						</div>
 					</div>
@@ -72,7 +132,7 @@
 				</header>
 			<div class="row">
 				<div class="col-md-2 col-sm-2 col-xs-2">
-					<aside style="align-items: center;">
+					<aside class="d-none d-md-block" style="align-items: center;">
 						<h3>Browse</h3>
 							<nav class="browse">
 								<ul class="main">
@@ -105,25 +165,38 @@
 								</div>
 							</div>
 							<div class="stats-links">
-								<section class="stats">
-									<span>2 Playlists</span>
-									<span>4 Reviews</span>
-									<span>6 Followers</span>
-									<span>13 Following</span>
-								</section>
-								<div class="links">
-									<div>
-										<a href="#">Collection</a>
-										<a href="#">History</a>
+								<div class="row">
+									<div class="col-md-10 col-sm-10 col-xs-10">
+										<section class="stats">
+											<span>2 Playlists</span>
+											<span>4 Reviews</span>
+											<span>6 Followers</span>
+											<span>13 Following</span>
+										</section>
+									</div>
+									<div class="col-md-2 col-sm-2 col-xs-2">
+										<div class="links">
+										<div>
+											<a href="#">Collection</a>
+											<a href="#">History</a>
+										</div>
+										</div>
 									</div>
 								</div>
 							</div>
 						</header>
-						<h2>Top Album</h2>
-							<div>
-								<a class="station" href="#">Start Station</a>
+						<div class="row">
+							<div class="col-md-10 col-sm-10 col-xs-10">
+								<h1>Top Album</h1>
 							</div>
+							<div class="col-md-2 col-sm-2 col-xs-2">
+								<div>
+									<a class="station" href="#" style="display:flex;justify-content: flex-end;">Start Station</a>
+								</div>
+							</div>
+						</div>
 							<section id="albums">
+
 							<article>
 								<figure>
 									<img src="img/album/album_01.png" />
@@ -215,7 +288,6 @@
 								<div class="count">13 songs</div>
 							</article>
 							</section>
-
 					</main>
 				</div>
 			</div>
