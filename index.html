@@ -9,18 +9,6 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no"/>
 		<style type="text/css">
 
-					/*	.row
-			{
-				padding-left: 20px;
-				border : 2px solid black;
-				margin-left: 10px;
-			}
-			.row2
-			{
-				padding-left: 20px;
-				border : 2px solid black;
-				margin-left: 10px;
-			}*/
 			.container-fluid
 			{
 				width: 90%;
@@ -40,7 +28,7 @@
  				}
 
  			}
-			@media screen and (max-width:320px)
+			@media screen and (min-width: 0px) and (max-width:720px)
 			{
  				.share
  				{
@@ -50,45 +38,25 @@
 
  			@media screen and (max-width:1400px)
 			{
- 				font-size : 100%;
+				body{
+					font-size : 100%;
+				}
+ 				
  			}
 
  			@media screen and (max-width:600px)
 			{
- 				font-size : 75%;
+ 				body{
+					font-size : 80%;
+				}
  			}
 
  			@media screen and (max-width:450px)
 			{
- 				font-size : 50%;
+ 				body{
+					font-size : 60%: 
+				}
  			}
-
-		/*	.row
-			{
-				border : 2px solid black;
-				
-			}
-			.logo-search
-			{
-				border : 2px solid black;
-				
-			}
-			.user
-			{
-				border : 2px solid black;
-				
-			}
-			form
-			{
-				border : 2px solid black;
-				
-			}
-			.links
-			{
-				border : 2px solid black;
-				
-			}
-*/
 
 		</style>
 	</head>
@@ -132,7 +100,7 @@
 				</header>
 			<div class="row">
 				<div class="col-md-2 col-sm-2 col-xs-2">
-					<aside class="d-none d-md-block" style="align-items: center;">
+					<aside class="d-none d-md-block" style="align-items: center; margin-top: 20px;">
 						<h3>Browse</h3>
 							<nav class="browse">
 								<ul class="main">
@@ -153,16 +121,18 @@
 					</aside>
 				</div>
 				<div class="col-md-10 col-sm-10 col-xs-10">
-					<main>
+					<main style=" margin-top: 20px;">
 						<header>
 							<div class="name-photo">
-								<aside>
-									<img src="img/artist.png" />
-								</aside>
-								<div class="name">
-									<h1>Luke Chesser</h1>
-										<p>Montreal, Quebec, Canada <a href="https://www.facebook.com/" target="_blank"><img class="share" src="img/icon/fb.png" /></a><a href="https://twitter.com/" target="_blank"><img class="share" src="img/icon/twitter.png" /></a></p>
-								</div>
+								<div class="row">
+									<aside>
+										<img src="img/artist.png" />
+									</aside>
+									<div class="name" style="margin-left: 20px;">
+										<h1>Luke Chesser</h1>
+											<p>Montreal, Quebec, Canada <a href="https://www.facebook.com/" target="_blank"><img class="share" src="img/icon/fb.png" /></a><a href="https://twitter.com/" target="_blank"><img class="share" src="img/icon/twitter.png" /></a></p>
+									</div>
+							</div>
 							</div>
 							<div class="stats-links">
 								<div class="row">
@@ -187,11 +157,11 @@
 						</header>
 						<div class="row">
 							<div class="col-md-10 col-sm-10 col-xs-10">
-								<h1>Top Album</h1>
+								<h2>Top Album</h2>
 							</div>
 							<div class="col-md-2 col-sm-2 col-xs-2">
 								<div>
-									<a class="station" href="#" style="display:flex;justify-content: flex-end;">Start Station</a>
+									<a class="station" href="#" style="display:flex; justify-content: space-around;">Start Station</a>
 								</div>
 							</div>
 						</div>
@@ -292,6 +262,5 @@
 				</div>
 			</div>
 		</div>
-
 	</body>
 </html>
